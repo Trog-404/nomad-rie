@@ -2,11 +2,12 @@
   "data": {
     "m_def": "rie_schema.schema_packages.rie.Workflow",
     "name": "rietest",
-    "datetime": "2025-01-08T22:23:39.158696+00:00",
+    "datetime": "2025-01-08T22:31:16.429453+00:00",
     "data_file": "Prova_rie.csv",
     "steps": [
       {
         "name": "puliza in O2 dopo litografia",
+        "duration": 120.0,
         "SF6_massflow": 0.0,
         "CHF3_massflow": 0.0,
         "O2_massflow": 5.0,
@@ -18,6 +19,7 @@
       },
       {
         "name": "etching del silicio per 2,5um",
+        "duration": 300.0,
         "SF6_massflow": 20.0,
         "CHF3_massflow": 20.0,
         "O2_massflow": 10.0,
@@ -29,6 +31,7 @@
       },
       {
         "name": "puliza finale dei residui di processo con Ar e O2",
+        "duration": 60.0,
         "SF6_massflow": 0.0,
         "CHF3_massflow": 0.0,
         "O2_massflow": 10.0,
@@ -48,13 +51,13 @@
     "entry_type": "Workflow",
     "mainfile": "/workspaces/nomad-rie/tests/data/rietest.archive.yaml",
     "text_search_contents": [
-      "Prova_rie.csv",
-      "puliza finale dei residui di processo con Ar e O2",
-      "puliza in O2 dopo litografia",
       "etching del silicio per 2,5um",
-      "rietest"
+      "rietest",
+      "puliza in O2 dopo litografia",
+      "Prova_rie.csv",
+      "puliza finale dei residui di processo con Ar e O2"
     ],
-    "n_quantities": 46,
+    "n_quantities": 49,
     "quantities": [
       "",
       "data",
@@ -70,6 +73,7 @@
       "data.steps.O2_massflow",
       "data.steps.Power",
       "data.steps.SF6_massflow",
+      "data.steps.duration",
       "data.steps.name",
       "metadata",
       "metadata.entry_name",
@@ -244,6 +248,12 @@
         "float_value": 20.0
       },
       {
+        "id": "data.steps.duration#rie_schema.schema_packages.rie.Workflow",
+        "definition": "nomad.datamodel.metainfo.basesections.ProcessStep.duration",
+        "path_archive": "data.steps.0.duration",
+        "float_value": 120.0
+      },
+      {
         "id": "data.steps.name#rie_schema.schema_packages.rie.Workflow",
         "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
         "path_archive": "data.steps.1.name",
@@ -296,6 +306,12 @@
         "definition": "rie_schema.schema_packages.rie.Step.Bias",
         "path_archive": "data.steps.1.Bias",
         "float_value": 75.0
+      },
+      {
+        "id": "data.steps.duration#rie_schema.schema_packages.rie.Workflow",
+        "definition": "nomad.datamodel.metainfo.basesections.ProcessStep.duration",
+        "path_archive": "data.steps.1.duration",
+        "float_value": 300.0
       },
       {
         "id": "data.steps.name#rie_schema.schema_packages.rie.Workflow",
@@ -352,6 +368,12 @@
         "float_value": 20.0
       },
       {
+        "id": "data.steps.duration#rie_schema.schema_packages.rie.Workflow",
+        "definition": "nomad.datamodel.metainfo.basesections.ProcessStep.duration",
+        "path_archive": "data.steps.2.duration",
+        "float_value": 60.0
+      },
+      {
         "id": "data.name#rie_schema.schema_packages.rie.Workflow",
         "definition": "nomad.datamodel.metainfo.basesections.BaseSection.name",
         "path_archive": "data.name",
@@ -361,7 +383,7 @@
         "id": "data.datetime#rie_schema.schema_packages.rie.Workflow",
         "definition": "nomad.datamodel.metainfo.basesections.Activity.datetime",
         "path_archive": "data.datetime",
-        "datetime_value": "2025-01-08T22:23:39.158696+00:00"
+        "datetime_value": "2025-01-08T22:31:16.429453+00:00"
       }
     ]
   },

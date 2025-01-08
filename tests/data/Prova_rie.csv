@@ -1,4 +1,4 @@
-﻿step name;SF6 massflow [sccm];CHF3 massflow [sccm];O2 massflow [sccm];Ar massflow [sccm];Chamber pressure [mbar];Chuck temperature [C];Power [watt];Bias [V]
-puliza in O2 dopo litografia;0;0;5;25;0.01;25;50;20
-etching del silicio per 2,5um;20;20;10;5;0.001;10;150;75
-puliza finale dei residui di processo con Ar e O2;0;0;10;20;0.01;25;40;20
+﻿step name;SF6 massflow [sccm];CHF3 massflow [sccm];O2 massflow [sccm];Ar massflow [sccm];Chamber pressure [mbar];Chuck temperature [C];Power [watt];Bias [V];etching time [min]
+puliza in O2 dopo litografia;0;0;5;25;0.01;25;50;20;2
+etching del silicio per 2,5um;20;20;10;5;0.001;10;150;75;5
+puliza finale dei residui di processo con Ar e O2;0;0;10;20;0.01;25;40;20;1

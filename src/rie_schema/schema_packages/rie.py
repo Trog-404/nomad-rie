@@ -67,6 +67,7 @@ class Step(ProcessStep, ArchiveSection):
                     "Chuck_temperature",
                     "Power",
                     "Bias"
+                    "duration"
                 ]
             }
         },)
@@ -205,6 +206,7 @@ class Workflow(Process, EntryData, ArchiveSection):
                 step.Bias = ureg.Quantity(
                     float(row['Bias [V]']), 'volt'
                 )
+                step.duration= ureg.Quantity(float(row['etching time [min]']), 'minute')
                 steps.append(step)
             self.steps=steps
 
