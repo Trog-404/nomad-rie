@@ -113,7 +113,7 @@ where = ["src"]
 [project.entry-points.'nomad.plugin']
 
 schema_package_entry_point = "rie_schema.schema_packages:schema_package_entry_point"
-rie = "rie.schema_packages:rie"
+rie = "rie_schema.schema_packages:rie"
 
 
 [tool.cruft]
