@@ -205,7 +205,6 @@ class Workflow(Process, EntryData, ArchiveSection):
                 step.Bias = ureg.Quantity(
                     row['Voltage [V]'], 'volt'
                 )
-                step.duration
                 steps.append(step)
             self.steps=steps
 
