@@ -2,18 +2,26 @@
   "data": {
     "m_def": "rie_schema.schema_packages.rie.Workflow",
     "name": "rietest",
-    "datetime": "2025-01-08T22:05:40.268928+00:00",
+    "datetime": "2025-01-08T22:23:39.158696+00:00",
     "data_file": "Prova_rie.csv",
     "steps": [
       {
         "name": "puliza in O2 dopo litografia",
+        "SF6_massflow": 0.0,
+        "CHF3_massflow": 0.0,
+        "O2_massflow": 5.0,
+        "Ar_massflow": 25.0,
         "Chamber_pressure": 0.01,
         "Chuck_temperature": 25.0,
         "Power": 50.0,
         "Bias": 20.0
       },
       {
-        "name": "etching del silicio per 2,5\u00b5m",
+        "name": "etching del silicio per 2,5um",
+        "SF6_massflow": 20.0,
+        "CHF3_massflow": 20.0,
+        "O2_massflow": 10.0,
+        "Ar_massflow": 5.0,
         "Chamber_pressure": 0.001,
         "Chuck_temperature": 10.0,
         "Power": 150.0,
@@ -21,6 +29,10 @@
       },
       {
         "name": "puliza finale dei residui di processo con Ar e O2",
+        "SF6_massflow": 0.0,
+        "CHF3_massflow": 0.0,
+        "O2_massflow": 10.0,
+        "Ar_massflow": 20.0,
         "Chamber_pressure": 0.01,
         "Chuck_temperature": 25.0,
         "Power": 40.0,
@@ -38,11 +50,11 @@
     "text_search_contents": [
       "Prova_rie.csv",
       "puliza finale dei residui di processo con Ar e O2",
-      "etching del silicio per 2,5\u00b5m",
-      "rietest",
-      "puliza in O2 dopo litografia"
+      "puliza in O2 dopo litografia",
+      "etching del silicio per 2,5um",
+      "rietest"
     ],
-    "n_quantities": 34,
+    "n_quantities": 46,
     "quantities": [
       "",
       "data",
@@ -50,10 +62,14 @@
       "data.datetime",
       "data.name",
       "data.steps",
+      "data.steps.Ar_massflow",
       "data.steps.Bias",
+      "data.steps.CHF3_massflow",
       "data.steps.Chamber_pressure",
       "data.steps.Chuck_temperature",
+      "data.steps.O2_massflow",
       "data.steps.Power",
+      "data.steps.SF6_massflow",
       "data.steps.name",
       "metadata",
       "metadata.entry_name",
@@ -157,12 +173,12 @@
       },
       {
         "definition_qualified_name": "rie_schema.schema_packages.rie.Step",
-        "definition_id": "d79874bc2c71dc299a8e9e13f116314f4e36598e",
+        "definition_id": "2fc02a51b6cd54c16f876df9dd57c1bbecd90a7e",
         "used_directly": true
       },
       {
         "definition_qualified_name": "rie_schema.schema_packages.rie.Workflow",
-        "definition_id": "59658d5170431cbdef84f0ddd36e8540a0d89afc",
+        "definition_id": "1cae74705844af300e8d6ada20c1a9accfbef7ab",
         "used_directly": true
       }
     ],
@@ -178,6 +194,30 @@
         "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
         "path_archive": "data.steps.0.name",
         "str_value": "puliza in O2 dopo litografia"
+      },
+      {
+        "id": "data.steps.SF6_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.SF6_massflow",
+        "path_archive": "data.steps.0.SF6_massflow",
+        "float_value": 0.0
+      },
+      {
+        "id": "data.steps.CHF3_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.CHF3_massflow",
+        "path_archive": "data.steps.0.CHF3_massflow",
+        "float_value": 0.0
+      },
+      {
+        "id": "data.steps.O2_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.O2_massflow",
+        "path_archive": "data.steps.0.O2_massflow",
+        "float_value": 5.0
+      },
+      {
+        "id": "data.steps.Ar_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Ar_massflow",
+        "path_archive": "data.steps.0.Ar_massflow",
+        "float_value": 25.0
       },
       {
         "id": "data.steps.Chamber_pressure#rie_schema.schema_packages.rie.Workflow",
@@ -207,7 +247,31 @@
         "id": "data.steps.name#rie_schema.schema_packages.rie.Workflow",
         "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
         "path_archive": "data.steps.1.name",
-        "str_value": "etching del silicio per 2,5\u00b5m"
+        "str_value": "etching del silicio per 2,5um"
+      },
+      {
+        "id": "data.steps.SF6_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.SF6_massflow",
+        "path_archive": "data.steps.1.SF6_massflow",
+        "float_value": 20.0
+      },
+      {
+        "id": "data.steps.CHF3_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.CHF3_massflow",
+        "path_archive": "data.steps.1.CHF3_massflow",
+        "float_value": 20.0
+      },
+      {
+        "id": "data.steps.O2_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.O2_massflow",
+        "path_archive": "data.steps.1.O2_massflow",
+        "float_value": 10.0
+      },
+      {
+        "id": "data.steps.Ar_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Ar_massflow",
+        "path_archive": "data.steps.1.Ar_massflow",
+        "float_value": 5.0
       },
       {
         "id": "data.steps.Chamber_pressure#rie_schema.schema_packages.rie.Workflow",
@@ -238,6 +302,30 @@
         "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
         "path_archive": "data.steps.2.name",
         "str_value": "puliza finale dei residui di processo con Ar e O2"
+      },
+      {
+        "id": "data.steps.SF6_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.SF6_massflow",
+        "path_archive": "data.steps.2.SF6_massflow",
+        "float_value": 0.0
+      },
+      {
+        "id": "data.steps.CHF3_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.CHF3_massflow",
+        "path_archive": "data.steps.2.CHF3_massflow",
+        "float_value": 0.0
+      },
+      {
+        "id": "data.steps.O2_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.O2_massflow",
+        "path_archive": "data.steps.2.O2_massflow",
+        "float_value": 10.0
+      },
+      {
+        "id": "data.steps.Ar_massflow#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Ar_massflow",
+        "path_archive": "data.steps.2.Ar_massflow",
+        "float_value": 20.0
       },
       {
         "id": "data.steps.Chamber_pressure#rie_schema.schema_packages.rie.Workflow",
@@ -273,7 +361,7 @@
         "id": "data.datetime#rie_schema.schema_packages.rie.Workflow",
         "definition": "nomad.datamodel.metainfo.basesections.Activity.datetime",
         "path_archive": "data.datetime",
-        "datetime_value": "2025-01-08T22:05:40.268928+00:00"
+        "datetime_value": "2025-01-08T22:23:39.158696+00:00"
       }
     ]
   },

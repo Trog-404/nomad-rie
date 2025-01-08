@@ -47,6 +47,7 @@ if TYPE_CHECKING:
 
 m_package = Package(name='Etching workflow schema')
 
+ureg.define('sccm = centimeter**3 / minute')
 
 class Step(ProcessStep, ArchiveSection):
     '''
@@ -74,36 +75,36 @@ class Step(ProcessStep, ArchiveSection):
         description='Flow of SF6 in the chamber',
         a_eln={
             "component": "NumberEditQuantity",
-            "defaultDisplayUnit": "celsius"
+            "defaultDisplayUnit": "sccm"
         },
-        unit="celsius",
+        unit="sccm",
     )
     CHF3_massflow = Quantity(
         type=np.float64,
         description='Flow of CHF3 in the chamber',
         a_eln={
             "component": "NumberEditQuantity",
-            "defaultDisplayUnit": "celsius"
+            "defaultDisplayUnit": "sccm"
         },
-        unit="celsius",
+        unit="sccm",
     )
     O2_massflow = Quantity(
         type=np.float64,
         description='Flow of O2 in the chamber',
         a_eln={
             "component": "NumberEditQuantity",
-            "defaultDisplayUnit": "celsius"
+            "defaultDisplayUnit": "sccm"
         },
-        unit="celsius",
+        unit="sccm",
     )
     Ar_massflow = Quantity(
         type=np.float64,
         description='Flow of Ar in the chamber',
         a_eln={
             "component": "NumberEditQuantity",
-            "defaultDisplayUnit": "celsius"
+            "defaultDisplayUnit": "sccm"
         },
-        unit="celsius",
+        unit="sccm",
     )
     Chamber_pressure = Quantity(
         type=np.float64,
@@ -189,10 +190,10 @@ class Workflow(Process, EntryData, ArchiveSection):
             for i, row in df.iterrows():
                 step = Step()
                 step.name = row['step name']
-#                step.SF6_massflow = ureg.Quantity(float(row['SF6_massflow [C]']), 'celsius')
-#                step.CHF3_massflow = ureg.Quantity(float(row['CHF3_massflow [C]']), 'celsius')
-#                step.O2_massflow = ureg.Quantity(float(row['O2_massflow [C]']), 'celsius')
-#                step.Ar_massflow = ureg.Quantity(float(row['Ar_massflow [C]']), 'celsius')
+                step.SF6_massflow = ureg.Quantity(float(row['SF6 massflow [sccm]']), 'sccm')
+                step.CHF3_massflow = ureg.Quantity(float(row['CHF3 massflow [sccm]']), 'sccm')
+                step.O2_massflow = ureg.Quantity(float(row['O2 massflow [sccm]']), 'sccm')
+                step.Ar_massflow = ureg.Quantity(float(row['Ar massflow [sccm]']), 'sccm')
                 step.Chamber_pressure = ureg.Quantity(
                     float(row['Chamber pressure [mbar]']), 'mbar'
                 )
