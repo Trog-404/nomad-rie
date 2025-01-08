@@ -57,6 +57,7 @@ class Step(ProcessStep, ArchiveSection):
             "properties": {
                 "order": [
                     "name",
+                    "start_time",
                     "SF6_massflow",
                     "CHF3_massflow",
                     "O2_massflow",
@@ -204,6 +205,7 @@ class Workflow(Process, EntryData, ArchiveSection):
                 step.Bias = ureg.Quantity(
                     row['Voltage [V]'], 'volt'
                 )
+                step.duration
                 steps.append(step)
             self.steps=steps
 
