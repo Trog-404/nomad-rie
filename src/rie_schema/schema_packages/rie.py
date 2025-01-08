@@ -184,7 +184,7 @@ class Workflow(Process, EntryData, ArchiveSection):
         super().normalize(archive, logger)
         if self.data_file:
             with archive.m_context.raw_file(self.data_file) as file:
-                df = pd.read_csv(file)
+                df = pd.read_csv(file, sep=";")
             steps = []
             for i, row in df.iterrows():
                 step = TemperatureRamp()
