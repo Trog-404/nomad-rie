@@ -57,7 +57,6 @@ class Step(ProcessStep, ArchiveSection):
             "properties": {
                 "order": [
                     "name",
-                    "start_time",
                     "SF6_massflow",
                     "CHF3_massflow",
                     "O2_massflow",
@@ -187,14 +186,23 @@ class Workflow(Process, EntryData, ArchiveSection):
                 df = pd.read_csv(file, sep=";")
             steps = []
             for i, row in df.iterrows():
-                step = TemperatureRamp()
+                step = Step()
                 step.name = row['step name']
-                step.duration = ureg.Quantity(float(row['duration [min]']), 'minutes')
-                step.initial_temperature = ureg.Quantity(
-                row['initial temperature [C]'], 'celsius'
+                step.SF6_massflow = ureg.Quantity(float(row['SF6_massflow [celsius]']), 'celsius')
+                step.CHF3_massflow = ureg.Quantity(float(row['CHF3_massflow [celsius]']), 'celsius')
+                step.O2_massflow = ureg.Quantity(float(row['O2_massflow [celsius]']), 'celsius')
+                step.Ar_massflow = ureg.Quantity(float(row['Ar_massflow [celsius]']), 'celsius')
+                step.Chuck_temperature = ureg.Quantity(
+                row['Chuck temperature [C]'], 'celsius'
                 )
-                step.final_temperature = ureg.Quantity(
-                    row['final temperature [C]'], 'celsius'
+                step.Chamber_pressure = ureg.Quantity(
+                    row['Pressure [mbar]'], 'mbar'
+                )
+                step.Power = ureg.Quantity(
+                    row['Power [W]'], 'watt'
+                )
+                step.Bias = ureg.Quantity(
+                    row['Voltage [V]'], 'volt'
                 )
                 steps.append(step)
             self.steps=steps
