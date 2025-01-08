@@ -1,0 +1,102 @@
+definitions:
+  name: 'Etching workflow schema'
+  sections:
+    Step:
+      m_annotations:
+        eln: 
+          properties:
+            order: 
+              - "name"
+              - "start_time"
+              - "SF6_massflow"
+              - "CHF3_massflow"
+              - "O2_massflow"
+              - "Ar_massflow"
+              - "Chamber_pressure"
+              - "Chuck_temperature"
+              - "Power"
+              - "Bias"
+#              - "Duration"
+      base_sections:
+        - nomad.datamodel.metainfo.basesections.ProcessStep
+      quantities:
+        SF6_massflow:
+          type: np.float64
+          unit: celsius
+          description: "Flow of SF6 in the chamber"
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              defaultDisplayUnit: celsius
+        CHF3_massflow:
+          type: np.float64
+          unit: celsius
+          description: "Flow of CHF3 in the chamber"
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              defaultDisplayUnit: celsius
+        O2_massflow:
+          type: np.float64
+          unit: celsius
+          description: "Flow of O2 in the chamber"
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              defaultDisplayUnit: celsius
+        Ar_massflow:
+          type: np.float64
+          unit: celsius
+          description: "Flow of Ar in the chamber"
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              defaultDisplayUnit: celsius
+        Chamber_pressure:
+          type: np.float64
+          unit: mbar
+          description: "Pressure in the chamber"
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              defaultDisplayUnit: mbar
+        Chuck_temperature:
+          type: np.float64
+          unit: celsius
+          description: "Temperature of the chuck"
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              defaultDisplayUnit: celsius
+        Power:
+          type: np.float64
+          unit: watt
+          description: "Power erogated"
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              defaultDisplayUnit: watt
+        Bias:
+          type: np.float64
+          unit: volt
+          description: "Bias voltage in the chamber"
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              defaultDisplayUnit: volt
+#        Duration:
+#          type: np.float64
+#          unit: minute
+#          description: "Time of the process"
+#          m_annotations:
+#            eln:
+#              component: NumberEditQuantity
+#              defaultDisplayUnit: minute
+    Workflow:
+      base_sections:
+        - nomad.datamodel.metainfo.basesections.Process
+        - nomad.datamodel.data.EntryData
+      sub_sections:
+        steps:
+          repeats: True
+          section: '#/Step'
