@@ -1,3 +1,3 @@
 data:
-  m_def: rie_schema.schema_packages.sintering.Sintering
+  m_def: rie_schema.schema_packages.rie.Workflow
   data_file: Prova_rie.csv

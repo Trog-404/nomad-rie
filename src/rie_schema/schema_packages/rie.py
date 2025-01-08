@@ -189,21 +189,20 @@ class Workflow(Process, EntryData, ArchiveSection):
             for i, row in df.iterrows():
                 step = Step()
                 step.name = row['step name']
-                step.SF6_massflow = ureg.Quantity(float(row['SF6_massflow [celsius]']), 'celsius')
-                step.CHF3_massflow = ureg.Quantity(float(row['CHF3_massflow [celsius]']), 'celsius')
-                step.O2_massflow = ureg.Quantity(float(row['O2_massflow [celsius]']), 'celsius')
-                step.Ar_massflow = ureg.Quantity(float(row['Ar_massflow [celsius]']), 'celsius')
-                step.Chuck_temperature = ureg.Quantity(
-                row['Chuck temperature [C]'], 'celsius'
-                )
+#                step.SF6_massflow = ureg.Quantity(float(row['SF6_massflow [C]']), 'celsius')
+#                step.CHF3_massflow = ureg.Quantity(float(row['CHF3_massflow [C]']), 'celsius')
+#                step.O2_massflow = ureg.Quantity(float(row['O2_massflow [C]']), 'celsius')
+#                step.Ar_massflow = ureg.Quantity(float(row['Ar_massflow [C]']), 'celsius')
                 step.Chamber_pressure = ureg.Quantity(
-                    row['Pressure [mbar]'], 'mbar'
+                    float(row['Chamber pressure [mbar]']), 'mbar'
+                )
+                step.Chuck_temperature = ureg.Quantity(float(row['Chuck temperature [C]']), 'celsius'
                 )
                 step.Power = ureg.Quantity(
-                    row['Power [W]'], 'watt'
+                    float(row['Power [watt]']), 'watt'
                 )
                 step.Bias = ureg.Quantity(
-                    row['Voltage [V]'], 'volt'
+                    float(row['Bias [V]']), 'volt'
                 )
                 steps.append(step)
             self.steps=steps

@@ -1,4 +1,4 @@
-﻿step name;SFS6 massflow controller [sccm];CHF3 massflow controller [sccm];O2 massflow controller [sccm];Ar massflow controller [sccm];Chamber pressure [mbar];Chuck temperature [C];Power [W];Bias [V]
+﻿step name;SFS6 massflow [C];CHF3 massflow [C];O2 massflow [C];Ar massflow [C];Chamber pressure [mbar];Chuck temperature [C];Power [watt];Bias [V]
 puliza in O2 dopo litografia;0;0;5;25;0.01;25;50;20
-etching del silicio per 2,5µm;20;20;10;5;0.001;10;150;75
-"puliza ""finale"" dei residui di processo con Ar e O2";0;0;10;20;0.01;25;40;20
+etching del silicio per 2,5um;20;20;10;5;0.001;10;150;75
+puliza finale dei residui di processo con Ar e O2;0;0;10;20;0.01;25;40;20

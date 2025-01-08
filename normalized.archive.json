@@ -1,0 +1,294 @@
+{
+  "data": {
+    "m_def": "rie_schema.schema_packages.rie.Workflow",
+    "name": "rietest",
+    "datetime": "2025-01-08T22:05:40.268928+00:00",
+    "data_file": "Prova_rie.csv",
+    "steps": [
+      {
+        "name": "puliza in O2 dopo litografia",
+        "Chamber_pressure": 0.01,
+        "Chuck_temperature": 25.0,
+        "Power": 50.0,
+        "Bias": 20.0
+      },
+      {
+        "name": "etching del silicio per 2,5\u00b5m",
+        "Chamber_pressure": 0.001,
+        "Chuck_temperature": 10.0,
+        "Power": 150.0,
+        "Bias": 75.0
+      },
+      {
+        "name": "puliza finale dei residui di processo con Ar e O2",
+        "Chamber_pressure": 0.01,
+        "Chuck_temperature": 25.0,
+        "Power": 40.0,
+        "Bias": 20.0
+      }
+    ]
+  },
+  "workflow2": {
+    "name": "rietest"
+  },
+  "metadata": {
+    "entry_name": "rietest.archive.yaml",
+    "entry_type": "Workflow",
+    "mainfile": "/workspaces/nomad-rie/tests/data/rietest.archive.yaml",
+    "text_search_contents": [
+      "Prova_rie.csv",
+      "puliza finale dei residui di processo con Ar e O2",
+      "etching del silicio per 2,5\u00b5m",
+      "rietest",
+      "puliza in O2 dopo litografia"
+    ],
+    "n_quantities": 34,
+    "quantities": [
+      "",
+      "data",
+      "data.data_file",
+      "data.datetime",
+      "data.name",
+      "data.steps",
+      "data.steps.Bias",
+      "data.steps.Chamber_pressure",
+      "data.steps.Chuck_temperature",
+      "data.steps.Power",
+      "data.steps.name",
+      "metadata",
+      "metadata.entry_name",
+      "metadata.entry_type",
+      "metadata.mainfile",
+      "metadata.quantities",
+      "metadata.section_defs",
+      "metadata.section_defs.definition_id",
+      "metadata.section_defs.definition_qualified_name",
+      "metadata.section_defs.used_directly",
+      "metadata.sections",
+      "results",
+      "results.eln",
+      "results.eln.methods",
+      "results.eln.names",
+      "results.eln.sections",
+      "results.properties",
+      "workflow2",
+      "workflow2.name"
+    ],
+    "sections": [
+      "nomad.datamodel.datamodel.EntryArchive",
+      "nomad.datamodel.datamodel.EntryMetadata",
+      "nomad.datamodel.metainfo.workflow.Workflow",
+      "nomad.datamodel.results.ELN",
+      "nomad.datamodel.results.Properties",
+      "nomad.datamodel.results.Results",
+      "rie_schema.schema_packages.rie.Step",
+      "rie_schema.schema_packages.rie.Workflow"
+    ],
+    "section_defs": [
+      {
+        "definition_qualified_name": "nomad.datamodel.data.ArchiveSection",
+        "definition_id": "7047cbff9980abff17cce4b1b6b0d1c783505b7f",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.data.EntryData",
+        "definition_id": "538f52fd8d52b29372066f878319c6aeb03b74d2",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.datamodel.EntryArchive",
+        "definition_id": "4216415b63b9b0d253c23c64a73e327879c12e91",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.datamodel.EntryMetadata",
+        "definition_id": "6edfa503af63b84d6a6021c227d00137b4c1cc9c",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.Activity",
+        "definition_id": "f10e73406ba5e32e6569029b1c983e0fd4c4be97",
+        "used_directly": false
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.ActivityStep",
+        "definition_id": "a99fab14031097eb4b33562274029bd735d753fa",
+        "used_directly": false
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.BaseSection",
+        "definition_id": "106bafb5140238b4afe8128b8c341b5b3e927838",
+        "used_directly": false
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.Process",
+        "definition_id": "4900ed1417b54796d9802ef005f2030503f723d8",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.ProcessStep",
+        "definition_id": "c1ab49b91cd0a92bd199740e3a6a2184a8e1498e",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.workflow.Task",
+        "definition_id": "66b7dd52b0f1ed539ac6a198ef1cc53f1ab6b8af",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.workflow.Workflow",
+        "definition_id": "7cc5d041361d8c5f11aa25e5fcc461979e7db173",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.ELN",
+        "definition_id": "eeed330bd18d40f3a2a00cc35ba6f58808d0c543",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.Properties",
+        "definition_id": "668532333a833a28e493a1e496d3702081567b42",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.Results",
+        "definition_id": "c0333058eb872eda870d53ca35021694cc06dc2e",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "rie_schema.schema_packages.rie.Step",
+        "definition_id": "d79874bc2c71dc299a8e9e13f116314f4e36598e",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "rie_schema.schema_packages.rie.Workflow",
+        "definition_id": "59658d5170431cbdef84f0ddd36e8540a0d89afc",
+        "used_directly": true
+      }
+    ],
+    "search_quantities": [
+      {
+        "id": "data.data_file#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Workflow.data_file",
+        "path_archive": "data.data_file",
+        "str_value": "Prova_rie.csv"
+      },
+      {
+        "id": "data.steps.name#rie_schema.schema_packages.rie.Workflow",
+        "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
+        "path_archive": "data.steps.0.name",
+        "str_value": "puliza in O2 dopo litografia"
+      },
+      {
+        "id": "data.steps.Chamber_pressure#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Chamber_pressure",
+        "path_archive": "data.steps.0.Chamber_pressure",
+        "float_value": 0.01
+      },
+      {
+        "id": "data.steps.Chuck_temperature#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Chuck_temperature",
+        "path_archive": "data.steps.0.Chuck_temperature",
+        "float_value": 25.0
+      },
+      {
+        "id": "data.steps.Power#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Power",
+        "path_archive": "data.steps.0.Power",
+        "float_value": 50.0
+      },
+      {
+        "id": "data.steps.Bias#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Bias",
+        "path_archive": "data.steps.0.Bias",
+        "float_value": 20.0
+      },
+      {
+        "id": "data.steps.name#rie_schema.schema_packages.rie.Workflow",
+        "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
+        "path_archive": "data.steps.1.name",
+        "str_value": "etching del silicio per 2,5\u00b5m"
+      },
+      {
+        "id": "data.steps.Chamber_pressure#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Chamber_pressure",
+        "path_archive": "data.steps.1.Chamber_pressure",
+        "float_value": 0.001
+      },
+      {
+        "id": "data.steps.Chuck_temperature#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Chuck_temperature",
+        "path_archive": "data.steps.1.Chuck_temperature",
+        "float_value": 10.0
+      },
+      {
+        "id": "data.steps.Power#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Power",
+        "path_archive": "data.steps.1.Power",
+        "float_value": 150.0
+      },
+      {
+        "id": "data.steps.Bias#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Bias",
+        "path_archive": "data.steps.1.Bias",
+        "float_value": 75.0
+      },
+      {
+        "id": "data.steps.name#rie_schema.schema_packages.rie.Workflow",
+        "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
+        "path_archive": "data.steps.2.name",
+        "str_value": "puliza finale dei residui di processo con Ar e O2"
+      },
+      {
+        "id": "data.steps.Chamber_pressure#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Chamber_pressure",
+        "path_archive": "data.steps.2.Chamber_pressure",
+        "float_value": 0.01
+      },
+      {
+        "id": "data.steps.Chuck_temperature#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Chuck_temperature",
+        "path_archive": "data.steps.2.Chuck_temperature",
+        "float_value": 25.0
+      },
+      {
+        "id": "data.steps.Power#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Power",
+        "path_archive": "data.steps.2.Power",
+        "float_value": 40.0
+      },
+      {
+        "id": "data.steps.Bias#rie_schema.schema_packages.rie.Workflow",
+        "definition": "rie_schema.schema_packages.rie.Step.Bias",
+        "path_archive": "data.steps.2.Bias",
+        "float_value": 20.0
+      },
+      {
+        "id": "data.name#rie_schema.schema_packages.rie.Workflow",
+        "definition": "nomad.datamodel.metainfo.basesections.BaseSection.name",
+        "path_archive": "data.name",
+        "str_value": "rietest"
+      },
+      {
+        "id": "data.datetime#rie_schema.schema_packages.rie.Workflow",
+        "definition": "nomad.datamodel.metainfo.basesections.Activity.datetime",
+        "path_archive": "data.datetime",
+        "datetime_value": "2025-01-08T22:05:40.268928+00:00"
+      }
+    ]
+  },
+  "results": {
+    "properties": {},
+    "eln": {
+      "sections": [
+        "Workflow"
+      ],
+      "names": [
+        "rietest"
+      ],
+      "methods": [
+        "Workflow"
+      ]
+    }
+  }
+}
