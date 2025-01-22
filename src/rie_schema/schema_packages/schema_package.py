@@ -11,7 +11,10 @@ if TYPE_CHECKING:
     )
 
 from nomad.config import config
-from nomad.datamodel.data import Schema
+from nomad.datamodel.data import (
+    ArchiveSection,
+    EntryData,
+)
 from nomad.datamodel.metainfo.annotations import ELNAnnotation, ELNComponentEnum
 from nomad.metainfo import Quantity, SchemaPackage
 
@@ -22,7 +25,7 @@ configuration = config.get_plugin_entry_point(
 m_package = SchemaPackage()
 
 
-class NewSchemaPackage(Schema):
+class NewSchemaPackage(EntryData):
     name = Quantity(
         type=str, a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity)
     )
