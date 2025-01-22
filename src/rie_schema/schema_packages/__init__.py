@@ -18,7 +18,6 @@ schema_package_entry_point = NewSchemaPackageEntryPoint(
 
 
 class RieEntryPoint(SchemaPackageEntryPoint):
-
     def load(self):
         from rie_schema.schema_packages.rie import m_package
 

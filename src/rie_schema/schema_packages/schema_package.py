@@ -12,7 +12,6 @@ if TYPE_CHECKING:
 
 from nomad.config import config
 from nomad.datamodel.data import (
-    ArchiveSection,
     EntryData,
 )
 from nomad.datamodel.metainfo.annotations import ELNAnnotation, ELNComponentEnum
